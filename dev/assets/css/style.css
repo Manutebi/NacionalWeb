@@ -11310,7 +11310,7 @@ fieldset:disabled .btn {
 }
 .bg-orange {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-orange-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #FF6824 !important;
 }
 .bg-yellow {
   --bs-bg-opacity: 1;
@@ -28935,7 +28935,7 @@ button:focus {
   bottom: 0;
   background: #fefefe;
   z-index: 9999;
-  transition: 0.5s all;
+  transition: 1s all;
 }
 .page-loader.done {
   visibility: hidden;
@@ -28953,7 +28953,7 @@ button:focus {
   margin-top: -1.25rem;
   margin-left: -1.25rem;
   background: none;
-  border: 4px solid #3f78e0;
+  border: 4px solid #FF6824;
   box-shadow: none;
   border-radius: 50%;
   animation: loader-scale 1s ease-out infinite;
@@ -38716,8 +38716,8 @@ footer.bg-dark,
 .image-wrapper.bg-overlay-300:before {
   background: rgba(30, 34, 40, 0.3);
 }
-.image-wrapper.bg-overlay-400:before {
-  background: rgba(30, 34, 40, 0.4);
+.image-wrapper.bg-overlay-400:before{
+  background: rgba(var(--bs-leaf-rgb), var(--bs-border-opacity));
 }
 .image-wrapper.bg-overlay-light-300:before {
   background: rgba(255, 255, 255, 0.3);
