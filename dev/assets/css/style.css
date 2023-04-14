@@ -32128,7 +32128,7 @@ button.hamburger span {
 .progressbar.semi-circle.soft-primary svg path:first-child {
   stroke: rgba(63, 120, 224, 0.1);
 }
-@media (min-width: 400px) {
+@media (min-width: 390px) {
   .progress-wrap.active-progress {
     opacity: 1;
   }
