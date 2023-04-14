@@ -90,7 +90,7 @@ var gulp = require('gulp'),
 /* Server */
 var config = {
     server: {
-        baseDir: './dist'
+        baseDir: './dev'
     },
     ghostMode: false, // By setting true, clicks, scrolls and form inputs on any device will be mirrored to all others
     notify: false
