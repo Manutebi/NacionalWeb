@@ -757,14 +757,14 @@ var theme = {
       "use strict";
       window.addEventListener("load", function() {
         var forms = document.querySelectorAll(".needs-validation");
-        var inputRecaptcha = document.querySelector("input[data-recaptcha]"); 
-        window.verifyRecaptchaCallback = function (response) {
-          inputRecaptcha.value = response; 
+        var inputRecaptcha = document.querySelector("input[data-recaptcha]");
+        window.verifyRecaptchaCallback = function(response) {
+          inputRecaptcha.value = response;
           inputRecaptcha.dispatchEvent(new Event("change"));
         }
-        window.expiredRecaptchaCallback = function () {
-          var inputRecaptcha = document.querySelector("input[data-recaptcha]"); 
-          inputRecaptcha.value = ""; 
+        window.expiredRecaptchaCallback = function() {
+          var inputRecaptcha = document.querySelector("input[data-recaptcha]");
+          inputRecaptcha.value = "";
           inputRecaptcha.dispatchEvent(new Event("change"));
         }
         var validation = Array.prototype.filter.call(forms, function(form) {
@@ -772,39 +772,13 @@ var theme = {
             if(form.checkValidity() === false) {
               event.preventDefault();
               event.stopPropagation();
+            } else {
+              form.classList.remove("was-validated");
             }
             form.classList.add("was-validated");
-            if(form.checkValidity() === true) {
-              event.preventDefault();
-              form.classList.remove("was-validated");
-              // Send message only if the form has class .contact-form
-              var isContactForm = form.classList.contains('contact-form');
-              if(isContactForm) {
-                var data = new FormData(form);
-                var alertClass = 'alert-danger';
-                fetch("assets/php/contact.php", {
-                  method: "post",
-                  body: data
-                }).then((data) => {
-                  if(data.ok) {
-                    alertClass = 'alert-success';
-                  }
-                  return data.text();
-                }).then((txt) => {
-                  var alertBox = '<div class="alert ' + alertClass + ' alert-dismissible fade show"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' + txt + '</div>';
-                  if(alertClass && txt) {
-                    form.querySelector(".messages").insertAdjacentHTML('beforeend', alertBox);
-                    form.reset();
-                    grecaptcha.reset();
-                  }
-                }).catch((err) => {
-                  console.log(err);
-                });
-              }
-            }
-          }, false);
+          });
         });
-      }, false);
+      });
     })();
   },
   /**
