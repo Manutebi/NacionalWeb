@@ -758,11 +758,11 @@ var theme = {
       window.addEventListener("load", function() {
         var forms = document.querySelectorAll(".needs-validation");
         var inputRecaptcha = document.querySelector("input[data-recaptcha]");
-        window.verifyRecaptchaCallback = function(response) {
+        window.verifyRecaptchaCallback = function (response) {
           inputRecaptcha.value = response;
           inputRecaptcha.dispatchEvent(new Event("change"));
         }
-        window.expiredRecaptchaCallback = function() {
+        window.expiredRecaptchaCallback = function () {
           var inputRecaptcha = document.querySelector("input[data-recaptcha]");
           inputRecaptcha.value = "";
           inputRecaptcha.dispatchEvent(new Event("change"));
@@ -772,13 +772,11 @@ var theme = {
             if(form.checkValidity() === false) {
               event.preventDefault();
               event.stopPropagation();
-            } else {
-              form.classList.remove("was-validated");
             }
             form.classList.add("was-validated");
-          });
+          }, false);
         });
-      });
+      }, false);
     })();
   },
   /**
