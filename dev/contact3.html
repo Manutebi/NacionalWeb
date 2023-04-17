@@ -175,14 +175,15 @@
           <div class="col-xl-10 mx-auto">
             <div class="row gy-10 gx-lg-8 gx-xl-12">
               <div class="col-lg-8">
-                <form class="contact-form needs-validation" method="post" action="./assets/php/contact.php" novalidate>
+                <form class="contact-form needs-validation" method="post" data-netlify="true" action="./assets/php/contact.php" novalidate>
+                  <input type="hidden" name="form-name" value="contact-form">
                   <div class="messages"></div>
                   <div class="row gx-4">
                     <div class="col-md-6">
                       <div class="form-floating mb-4">
                         <input id="form_name" type="text" name="name" class="form-control" placeholder="Jane" required>
-                        <label for="form_name">First Name *</label>
-                        <div class="valid-feedback"> Looks good! </div>
+                        <label for="form_name">Nombre *</label>
+                        <div class="valid-feedback"> Todo bien! </div>
                         <div class="invalid-feedback"> Please enter your first name. </div>
                       </div>
                     </div>
@@ -190,8 +191,8 @@
                     <div class="col-md-6">
                       <div class="form-floating mb-4">
                         <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required>
-                        <label for="form_lastname">Last Name *</label>
-                        <div class="valid-feedback"> Looks good! </div>
+                        <label for="form_lastname">Apelledio *</label>
+                        <div class="valid-feedback"> Todo bien! </div>
                         <div class="invalid-feedback"> Please enter your last name. </div>
                       </div>
                     </div>
@@ -200,7 +201,7 @@
                       <div class="form-floating mb-4">
                         <input id="form_email" type="email" name="email" class="form-control" placeholder="jane.doe@example.com" required>
                         <label for="form_email">Email *</label>
-                        <div class="valid-feedback"> Looks good! </div>
+                        <div class="valid-feedback"> Todo bien! </div>
                         <div class="invalid-feedback"> Please provide a valid email address. </div>
                       </div>
                     </div>
@@ -208,13 +209,13 @@
                     <div class="col-md-6">
                       <div class="form-select-wrapper mb-4">
                         <select class="form-select" id="form-select" name="department" required>
-                          <option selected disabled value="">Select a department</option>
-                          <option value="Sales">Sales</option>
+                          <option selected disabled value="">Selecciona una área</option>
+                          <option value="Sales">Ventas</option>
                           <option value="Marketing">Marketing</option>
-                          <option value="Customer Support">Customer Support</option>
+                          <option value="Customer Support">Soporte</option>
                         </select>
-                        <div class="valid-feedback"> Looks good! </div>
-                        <div class="invalid-feedback"> Please select a department. </div>
+                        <div class="valid-feedback"> Todo bien! </div>
+                        <div class="invalid-feedback">Porfavor selecciona un departamento</div>
                       </div>
                     </div>
                     <!-- /column -->
@@ -222,22 +223,22 @@
                       <div class="form-floating mb-4">
                         <textarea id="form_message" name="message" class="form-control" placeholder="Your message" style="height: 150px" required></textarea>
                         <label for="form_message">Message *</label>
-                        <div class="valid-feedback"> Looks good! </div>
-                        <div class="invalid-feedback"> Please enter your messsage. </div>
+                        <div class="valid-feedback"> Todo bien! </div>
+                        <div class="invalid-feedback"> Porfavor ingresa tu mensaje. </div>
                       </div>
                     </div>
                     <!-- /column -->
                     <div class="col-12">
                       <div class="form-check mb-4">
                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck"> I agree to <a href="#" class="hover">terms and policy</a>. </label>
-                        <div class="invalid-feedback"> You must agree before submitting. </div>
+                        <label class="form-check-label" for="invalidCheck"> Estoy de acuerdo con <a href="#" class="hover">terminos y condiciones</a>. </label>
+                        <div class="invalid-feedback"> Debes estar de acuerdo antes de enviar. </div>
                       </div>
                     </div>
                     <!-- /column -->
                     <div class="col-12">
                       <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Send message">
-                      <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                      <p class="text-muted"><strong>*</strong> Estos campos E.</p>
                     </div>
                     <!-- /column -->
                   </div>
