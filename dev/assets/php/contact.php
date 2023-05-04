@@ -19,14 +19,14 @@ $sendToEmail = 'manuanig@gmail.com'; // Email address that will receive the mess
 $sendToName = 'To Name'; // Name that will receive the message with the output of the form
 
 // Subject
-$subject = 'Message from Sandbox contact form';
+$subject = 'Mensaje del formulario de contacto web';
 
 // Fields - Value of attribute name => Text to appear in the email
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message', 'department' => 'Department');
 
 // Success and error alerts
-$okMessage = 'We have received your inquiry. Stay tuned, we’ll get back to you very soon.';
-$errorMessage = 'There was an error while submitting the form. Please try again later';
+$okMessage = 'Hemos recibido su consulta. Este atento, nos pondremos en contacto con usted muy pronto.';
+$errorMessage = 'Hubo un error al enviar el formulario. Por favor, inténtelo de nuevo más tarde';
 
 // SMTP settings
 $smtpUse = false; // Set to true to enable SMTP authentication
