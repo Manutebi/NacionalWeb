@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordenar JSON</title>
+    <link rel="stylesheet" type="text/css" href="">
+    <style>
+        .container {
+    margin: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #141414;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea id="jsonInput" placeholder="Pega aquí tus datos JSON"></textarea>
+        <button id="sortButton">Ordenar</button>
+        <pre id="output"></pre>
+    </div>
+
+    <script>
+        document.getElementById('sortButton').addEventListener('click', function() {
+    var jsonInput = document.getElementById('jsonInput').value;
+    try {
+        var jsonData = JSON.parse(jsonInput);
+        var sortedJson = JSON.stringify(jsonData, null, 2);
+        document.getElementById('output').textContent = sortedJson;
+    } catch (error) {
+        document.getElementById('output').textContent = 'Error: Datos JSON inválidos';
+    }
+});
+
+//Parsear la respuesta
+const data = JSON.parse(body);
+
+//Obtener dato especifico
+const datoEspecifico = data.records[2];
+
+//Obtener el valor del campo "Nombre" del registro especifico 
+const nombre = datoEspecifico.fields.Nombre;
+
+const descripcion = datoEspecifico.fields.Descripcion;
+
+//Imprimir los valores
+console.log("Nombre:", nombre);
+console.log("Descripcion:",descripcion);
+
+
+    </script>
+
+    <script>
+        
+        const data = JSON.parse(body);
+
+        const registro = data.records[0];
+
+        const nombre = registro.fields.Nombre;
+        const nombre = registro.fields.Nombre;
+
+        console.log("Nombre:", nombre);
+        console.log("Descripcion:", descripcion);
+    </script>
+
+</body>
+</html>
+
+
+
