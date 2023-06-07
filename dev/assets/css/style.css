@@ -31132,7 +31132,7 @@ button.hamburger span {
 .navbar.position-absolute:not(.fixed):not(.navbar-light) button.hamburger,
 .navbar.navbar-bg-dark button.hamburger,
 .navbar.navbar-dark button.hamburger {
-  color: #fff;
+  color: #343f52;
 }
 .card {
   box-shadow: 0 0 0 0.05rem rgba(8, 60, 130, 0.06), 0rem 0rem 1.25rem rgba(30, 34, 40, 0.04);
@@ -32621,7 +32621,8 @@ button.hamburger span {
 @media (max-width: 767px) {
   .swiper-fullscreen,
   .swiper-fullscreen .swiper:not(.swiper-thumbs) .swiper-slide {
-    height: 500px !important;
+    height: 200px !important;
+    margin-top: 55px !important;
   }
 }
 @media (min-width: 1024px) {
