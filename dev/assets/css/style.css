@@ -32572,6 +32572,7 @@ button.hamburger span {
 }
 .swiper-fullscreen {
   height: 100vh;
+  margin-top: 20px; 
 }
 .swiper-fullscreen .swiper:not(.swiper-thumbs) .swiper-slide {
   height: 100vh;
